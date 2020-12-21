@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   boolean.h                                          :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jseo <jseo@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: seonhong <seonghong@student.42seoul>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/24 10:07:45 by jseo              #+#    #+#             */
-/*   Updated: 2020/10/24 10:19:06 by jseo             ###   ########.fr       */
+/*   Created: 2020/10/20 18:42:11 by seonhong          #+#    #+#             */
+/*   Updated: 2020/10/21 14:05:24 by seonhong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BOOLEAN_H
-# define BOOLEAN_H
-
-typedef	enum {
-	false = 0,
-	true = 1,
-}	t_bool;
-
-#endif
+int		ft_str_is_printable(char *str)
+{
+	while (*str)
+	{
+		if (*str < ' ' || *str > '~')
+		{
+			return (0);
+		}
+		str++;
+	}
+	return (1);
+}
